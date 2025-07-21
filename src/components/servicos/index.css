@@ -1,0 +1,265 @@
+        .servicos-section {
+          background: #FFFFFF;
+          padding: 100px 0;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .servicos-section::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 4px;
+          background: linear-gradient(90deg, #00C853, #FFB300, #1A237E);
+        }
+
+        .section-header {
+          text-align: center;
+          margin-bottom: 80px;
+        }
+
+        .section-badge {
+          display: inline-block;
+          background: #1A237E;
+          color: #FFFFFF;
+          padding: 8px 20px;
+          border-radius: 50px;
+          font-size: 14px;
+          font-weight: 600;
+          margin-bottom: 20px;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+        }
+
+        .section-title {
+          font-size: clamp(2rem, 4vw, 3rem);
+          font-weight: 700;
+          color: #1A237E;
+          margin-bottom: 20px;
+          line-height: 1.2;
+        }
+
+        .section-subtitle {
+          font-size: 1.2rem;
+          color: #263238;
+          max-width: 600px;
+          margin: 0 auto;
+          opacity: 0.8;
+        }
+
+        .servicos-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+          gap: 30px;
+          margin-bottom: 80px;
+        }
+
+        .servico-card {
+          background: #F5F5F5;
+          padding: 40px 30px;
+          border-radius: 20px;
+          text-align: center;
+          transition: all 0.4s ease;
+          border: 2px solid transparent;
+          position: relative;
+          overflow: hidden;
+          cursor: pointer;
+        }
+
+        .servico-card:hover {
+          background: #FFFFFF;
+          border-color: #00C853;
+          transform: translateY(-10px);
+          box-shadow: 0 20px 50px rgba(0, 200, 83, 0.15);
+        }
+
+        .servico-hover-effect {
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, transparent, rgba(0, 200, 83, 0.1), transparent);
+          transition: left 0.6s ease;
+        }
+
+        .servico-card:hover .servico-hover-effect {
+          left: 100%;
+        }
+
+        .servico-icon {
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(135deg, #00C853, #FFB300);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto 25px;
+          font-size: 32px;
+          transition: all 0.3s ease;
+          position: relative;
+          z-index: 2;
+        }
+
+        .servico-card:hover .servico-icon {
+          transform: scale(1.1) rotate(5deg);
+          background: linear-gradient(135deg, #FFB300, #00C853);
+        }
+
+        .servico-titulo {
+          font-size: 1.4rem;
+          font-weight: 700;
+          color: #1A237E;
+          margin-bottom: 15px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .servico-descricao {
+          font-size: 1rem;
+          color: #263238;
+          line-height: 1.6;
+          opacity: 0.8;
+          position: relative;
+          z-index: 2;
+        }
+
+        .cta-section {
+          background: linear-gradient(135deg, #1A237E, #263238);
+          padding: 60px 40px;
+          border-radius: 25px;
+          text-align: center;
+          color: #FFFFFF;
+          position: relative;
+          overflow: hidden;
+        }
+
+        .cta-section::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(0, 200, 83, 0.1) 0%, transparent 70%);
+          animation: pulse 4s ease-in-out infinite;
+        }
+
+        .cta-title {
+          font-size: 2rem;
+          font-weight: 700;
+          margin-bottom: 15px;
+          position: relative;
+          z-index: 2;
+        }
+
+        .cta-subtitle {
+          font-size: 1.1rem;
+          margin-bottom: 40px;
+          opacity: 0.9;
+          position: relative;
+          z-index: 2;
+        }
+
+        .cta-buttons {
+          display: flex;
+          gap: 20px;
+          justify-content: center;
+          flex-wrap: wrap;
+          position: relative;
+          z-index: 2;
+        }
+
+        .btn {
+          padding: 15px 30px;
+          border: none;
+          border-radius: 50px;
+          font-size: 16px;
+          font-weight: 600;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          text-decoration: none;
+          display: inline-block;
+          min-width: 180px;
+        }
+
+        .btn-primary {
+          background: #00C853;
+          color: #FFFFFF;
+          box-shadow: 0 10px 30px rgba(0, 200, 83, 0.4);
+        }
+
+        .btn-primary:hover {
+          background: #FFB300;
+          transform: translateY(-3px);
+          box-shadow: 0 15px 40px rgba(255, 179, 0, 0.6);
+        }
+
+        .btn-secondary {
+          background: transparent;
+          color: #FFFFFF;
+          border: 2px solid #FFFFFF;
+        }
+
+        .btn-secondary:hover {
+          background: #FFFFFF;
+          color: #1A237E;
+          transform: translateY(-3px);
+        }
+
+        @keyframes pulse {
+          0%, 100% {
+            transform: scale(1);
+            opacity: 0.1;
+          }
+          50% {
+            transform: scale(1.1);
+            opacity: 0.2;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .servicos-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+          }
+
+          .servico-card {
+            padding: 30px 20px;
+          }
+
+          .cta-buttons {
+            flex-direction: column;
+            align-items: center;
+          }
+
+          .btn {
+            width: 100%;
+            max-width: 300px;
+          }
+
+          .servicos-section {
+            padding: 60px 0;
+          }
+
+          .cta-section {
+            padding: 40px 20px;
+          }
+
+          .cta-title {
+            font-size: 1.5rem;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .servicos-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .servico-card {
+            min-width: unset;
+          }
+        }
